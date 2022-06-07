@@ -11,12 +11,12 @@
 <body>
 
     <?php
-    $phrase = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, rerum pariatur quasi dolor architecto iure nulla voluptas similique rem, necessitatibus deleniti temporibus autem? Dignissimos labore odio nisi impedit facere dicta.";
+    $phrase = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, rerum pariatur quasi dolor architecto iure nulla voluptas similique rem, necessitatibus deleniti temporibus autem? Dignissimos labore odio nisi impedit facere dicta. Lorem culpa incidunt aut provident nemo ab sit quae placeat.";
     $phrase_len = strlen($phrase);
+    $badword = $_GET['badword'];
     ?>
 
-
-    <p><?php echo $phrase ?></p>
+    <p><?php echo str_replace($badword, '***', $phrase) ?></p>
 
     <span>La lunghezza di questo paragrafo è uguale a <?php echo $phrase_len ?></span>
 
